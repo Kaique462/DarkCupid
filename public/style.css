@@ -1,0 +1,42 @@
+*{box-sizing:border-box}
+body{margin:0;background:#08080c;color:#eee;font-family:Arial,sans-serif}
+button,input,textarea,select{font:inherit}button{cursor:pointer}.hide{display:none!important}
+#toast{position:fixed;right:15px;bottom:15px;background:#20202a;border:1px solid #555;padding:12px 15px;border-radius:10px;opacity:0;transform:translateY(30px);transition:.2s;z-index:20;max-width:360px}
+#toast.show{opacity:1;transform:none}
+.auth{width:min(420px,92%);margin:auto;padding-top:7vh;text-align:center}
+.cupid{font-size:78px;filter:drop-shadow(0 0 20px #a00050);animation:f 2.5s infinite}h1{letter-spacing:4px}
+.auth p,.auth small{color:#888}.safety-note{background:#17131b;border:1px solid #4c1940;color:#d7b8cd;padding:10px;border-radius:10px;font-size:13px;margin-top:15px}
+.tabs{display:flex;background:#121219;padding:5px;border-radius:10px;margin:20px 0 12px}
+.tabs button{flex:1;background:transparent;color:#888;border:0;padding:10px;border-radius:8px}.tabs .on{background:#8d0044;color:#fff}
+.auth form{display:grid;gap:10px}.auth input,.card input,.card textarea,.chatRight input,.card select{background:#121219;color:#fff;border:1px solid #30303a;border-radius:10px;padding:13px;outline:0}
+.auth form button,.card>div button,.edit>button,.chatRight form button,.privacyCard>button{background:#98004b;color:#fff;border:0;border-radius:10px;padding:12px;font-weight:bold}
+.auth input:focus,.card input:focus,.card textarea:focus,.card select:focus{border-color:#a0004d}
+.check{font-size:12px;color:#aaa;display:flex;align-items:center;justify-content:center;gap:7px}.check input{width:auto}
+header{height:62px;background:#0e0e14;border-bottom:1px solid #292933;display:flex;align-items:center;justify-content:space-between;padding:0 4%;position:sticky;top:0;z-index:3}
+header button{background:transparent;color:#aaa;border:1px solid #333;border-radius:8px;padding:8px}
+main{width:min(1100px,94%);margin:20px auto;display:grid;grid-template-columns:220px 1fr;gap:18px}
+aside,.card{background:#101017;border:1px solid #292933;border-radius:14px;padding:14px}aside{height:max-content;position:sticky;top:82px}
+.nav{display:block;width:100%;text-align:left;background:transparent;color:#999;border:0;padding:11px;border-radius:8px;margin-top:4px}.nav.on,.nav:hover{background:#76003d;color:#fff}
+.mini{display:flex;gap:9px;align-items:center;padding-bottom:14px;border-bottom:1px solid #292933;margin-bottom:8px}.avatar{width:45px;height:45px;border-radius:50%;background:#20202a;border:2px solid #98004b;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-weight:bold;flex:none}
+.mini b{font-size:14px}.mini small{display:block;color:#777}.page h2{margin-top:0}.composer textarea{width:100%;min-height:90px;resize:vertical}
+.composer>div{display:flex;justify-content:space-between;align-items:center;margin-top:9px}.composer label,.imageBtn{background:#1d1d25;padding:9px;border-radius:8px;color:#bbb;cursor:pointer}
+.post{margin-top:12px}.postHead{display:flex;gap:10px;align-items:center}.postHead h3{margin:0;font-size:15px}.postHead small{color:#666}.post p{white-space:pre-wrap;line-height:1.5}.post img{width:100%;max-height:550px;object-fit:cover;border-radius:10px}
+.person{display:flex;gap:10px;align-items:center;background:#101017;border:1px solid #292933;padding:11px;border-radius:11px;margin-bottom:9px}.person .info{flex:1}.person h3{margin:0;font-size:15px}.person p{margin:3px 0;color:#777;font-size:12px}.person button{background:#29202a;color:#fff;border:0;border-radius:8px;padding:8px}
+.chat{padding:0;display:grid;grid-template-columns:210px 1fr;height:600px;overflow:hidden}.chatPeople{border-right:1px solid #292933;overflow:auto}.chatPerson{width:100%;display:flex;gap:8px;align-items:center;text-align:left;background:transparent;color:#fff;border:0;padding:10px;border-bottom:1px solid #22222b}.chatPerson:hover{background:#25202a}.chatPerson .avatar{width:38px;height:38px}
+.chatRight{display:flex;flex-direction:column;min-width:0}.chatRight>div:first-child{flex:1;overflow:auto;padding:14px}.bubbleRow{display:flex;margin:7px 0}.bubbleRow.me{justify-content:flex-end}.bubble{background:#22222d;padding:9px 12px;border-radius:13px;max-width:75%;overflow-wrap:anywhere}.me .bubble{background:#76003d}.bubble small{display:block;color:#999;font-size:10px;margin-top:4px}.bubble img{display:block;max-width:280px;max-height:320px;border-radius:10px;margin-top:6px;object-fit:cover}
+.chatRight form{border-top:1px solid #292933;padding:10px}.msgTools{display:flex;align-items:center;gap:8px;margin-bottom:7px}.sendLine{display:flex;gap:7px}.sendLine input{flex:1}.imageBtn{display:inline-flex;align-items:center;justify-content:center}.chatActions{display:flex!important;gap:7px;padding:8px 10px;border-top:1px solid #292933;flex:none}.chatActions button{background:#25202d;color:#fff;border:1px solid #3a3040;border-radius:8px;padding:8px}.chatActions button:hover{background:#3b1d35}
+.edit{display:grid;gap:12px}.edit label,.privacyCard label{display:grid;gap:5px;color:#aaa}.edit textarea{min-height:100px;resize:vertical}.big{width:120px;height:120px;border-radius:50%;background:#20202a;border:3px solid #98004b;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;font-size:40px;font-weight:bold}
+.privacyCard{margin-top:12px;display:grid;gap:12px}.privacyCard h3{margin:2px 0}.blockedUser{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px;background:#181820;border-radius:9px;margin-top:6px}.blockedUser button{background:#302631;color:#fff;border:0;border-radius:7px;padding:7px}
+.privacy-hint{color:#777;font-size:13px}.muted{color:#777}
+@keyframes f{50%{transform:translateY(-8px)}}
+@media(max-width:720px){main{grid-template-columns:1fr}aside{position:static;display:flex;gap:3px;overflow:auto}.mini{display:none}.nav{white-space:nowrap;width:auto}.chat{grid-template-columns:125px 1fr;height:560px}.bubble img{max-width:210px}}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);display:flex;align-items:center;justify-content:center;z-index:50;padding:20px}
+.modalBox{width:min(430px,100%);background:#101017;border:1px solid #4a1740;border-radius:16px;padding:24px;text-align:center;box-shadow:0 0 35px rgba(160,0,80,.2)}
+.smallCupid{font-size:48px}.modalBox h2{margin:8px 0}.modalBox p{color:#aaa;line-height:1.5}.modalBox .check{margin:18px 0}
+.modalBox button{width:100%;border:0;border-radius:10px;padding:11px;margin-top:8px;background:#98004b;color:#fff;font-weight:bold}
+.modalBox .secondary{background:#29202d;color:#ddd}
+
+.ownerAccess{margin-top:20px}.ownerAccess button{background:transparent;color:#777;border:1px solid #2c2c35;border-radius:8px;padding:8px 12px}
+.ownerPanel{min-height:100vh}.ownerWrap{width:min(900px,94%);margin:30px auto}.ownerClose{background:#29202d;color:#fff;border:0;border-radius:9px;padding:9px 12px}.ownerTop{display:flex;gap:8px;align-items:center;margin-bottom:12px}.ownerTop b{margin-right:auto}
+.reportCard{border-top:1px solid #292933;padding:14px 0}.reportCard:first-child{border-top:0}.reportCard p{color:#aaa}.reportActions{display:flex;gap:8px;flex-wrap:wrap}.reportActions button{border:0;border-radius:8px;padding:8px 10px;background:#29202a;color:#fff}.reportActions .danger{background:#8b123f}

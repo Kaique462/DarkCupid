@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": "mu4yue7poa1e7l",
+      "username": "kaiquepython2_",
+      "passwordHash": "$2b$12$5KhZmXB6D//ffe7T/F3tMeHnSBKg18XBRZxAF3CrGlvgQ3gMzXQr2",
+      "displayName": "Kaique",
+      "bio": "",
+      "photo": "",
+      "ageConfirmed": true,
+      "privacy": {
+        "profileVisibility": "public",
+        "allowMessages": "connections"
+      },
+      "createdAt": "2026-09-17T03:24:30.694Z"
+    }
+  ],
+  "connections": [],
+  "messages": [],
+  "posts": [],
+  "reports": [],
+  "blocks": [],
+  "moderationActions": [],
+  "moderation": []
+}

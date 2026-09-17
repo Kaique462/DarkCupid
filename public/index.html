@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dark Cupid</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="toast"></div>
+
+<section id="auth">
+  <div class="auth">
+    <div class="cupid">💘</div>
+    <h1>DARK CUPID</h1>
+    <p>Rede de conexões, amizades e conversas.</p>
+    <div class="safety-note">🔒 Espaço destinado exclusivamente a maiores de 18 anos.</div>
+    <div class="tabs"><button data-t="login" class="on">Entrar</button><button data-t="reg">Criar conta</button></div>
+    <form id="login">
+      <input id="lu" placeholder="Usuário" required>
+      <input id="lp" type="password" placeholder="Senha" required>
+      <button>ENTRAR</button>
+    </form>
+    <form id="reg" class="hide">
+      <input id="rn" placeholder="Nome de exibição" maxlength="30" required>
+      <input id="ru" placeholder="Usuário (3–20)" maxlength="20" required>
+      <input id="rp" type="password" placeholder="Senha (mín. 6)" required>
+      <label class="check"><input id="age" type="checkbox"> Confirmo que tenho 18 anos ou mais.</label>
+      <button>CRIAR CONTA</button>
+    </form>
+    <small>Não compartilhe dados pessoais, senhas ou informações financeiras.</small>
+  </div>
+</section>
+
+<div id="ageGate" class="modal hide">
+  <div class="modalBox">
+    <div class="cupid smallCupid">💘</div>
+    <h2>Confirmação de idade</h2>
+    <p>O Dark Cupid é destinado exclusivamente a pessoas com 18 anos ou mais.</p>
+    <label class="check"><input id="existingAge" type="checkbox"> Confirmo que tenho 18 anos ou mais.</label>
+    <button id="confirmAge">Continuar</button>
+    <button id="cancelAge" class="secondary">Sair</button>
+  </div>
+</div>
+<section id="ownerPanel" class="hide">
+  <div class="ownerWrap">
+    <button id="ownerClose" class="ownerClose">Voltar</button>
+    <h2>Área do dono</h2>
+    <div id="ownerLoginBox" class="card">
+      <input id="ou" placeholder="Usuário do dono">
+      <input id="op" type="password" placeholder="Senha do dono">
+      <button id="ownerLogin">Entrar</button>
+    </div>
+    <div id="ownerDash" class="card hide">
+      <div class="ownerTop"><b>Denúncias</b><button id="ownerRefresh">Atualizar</button><button id="ownerLogout">Sair</button></div>
+      <div id="ownerReports"><p>Nenhuma denúncia carregada.</p></div>
+    </div>
+  </div>
+</section>
+<section id="app" class="hide">
+<header><b>💘 DARK CUPID</b><button id="logout">Sair</button></header>
+<main>
+<aside>
+  <div id="me"></div>
+  <button class="nav on" data-p="feed">🏠 Mural</button>
+  <button class="nav" data-p="people">👥 Pessoas</button>
+  <button class="nav" data-p="chat">💬 Conversas</button>
+  <button class="nav" data-p="profile">👤 Perfil</button>
+</aside>
+<article>
+
+<div id="feed" class="page">
+  <h2>Mural</h2>
+  <form id="post" class="card composer">
+    <textarea id="pt" maxlength="500" placeholder="Compartilhe algo..."></textarea>
+    <div><label>📷 Foto<input id="pf" type="file" accept="image/*" hidden></label><button>Publicar</button></div>
+  </form>
+  <div id="feedList"></div>
+</div>
+
+<div id="people" class="page hide">
+  <h2>Pessoas</h2>
+  <p class="privacy-hint">Pessoas bloqueadas não aparecem aqui.</p>
+  <div id="peopleList"></div>
+</div>
+
+<div id="chat" class="page hide">
+  <h2>Conversas <small id="chatTitle"></small></h2>
+  <div class="chat card">
+    <div id="chatPeople"></div>
+    <div class="chatRight">
+      <div id="msgs">Escolha uma pessoa.</div>
+      <form id="msg" class="hide">
+        <div class="msgTools">
+          <label class="imageBtn" title="Enviar imagem">📷<input id="miFile" type="file" accept="image/*" hidden></label>
+          <span id="fileName"></span>
+        </div>
+        <div class="sendLine">
+          <input id="mi" maxlength="1000" placeholder="Mensagem...">
+          <button>Enviar</button>
+        </div>
+      </form>
+      <div id="chatActions" class="chatActions hide">
+        <button id="blockBtn" type="button">🚫 Bloquear</button>
+        <button id="reportBtn" type="button">⚠️ Denunciar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="profile" class="page hide">
+  <h2>Meu perfil</h2>
+  <div class="card edit">
+    <div id="big" class="big"></div>
+    <label>Foto<input id="photo" type="file" accept="image/*"></label>
+    <label>Nome<input id="pn" maxlength="30"></label>
+    <label>Bio<textarea id="pb" maxlength="180"></textarea></label>
+    <button id="save">Salvar perfil</button>
+  </div>
+  <div class="card privacyCard">
+    <h3>🔒 Privacidade e segurança</h3>
+    <label>Quem pode ver seu perfil
+      <select id="privacyProfile">
+        <option value="public">Todos</option>
+        <option value="connections">Somente conexões</option>
+        <option value="private">Ninguém</option>
+      </select>
+    </label>
+    <label>Quem pode enviar mensagens
+      <select id="privacyMessages">
+        <option value="connections">Somente conexões</option>
+        <option value="everyone">Todos</option>
+      </select>
+    </label>
+    <button id="savePrivacy">Salvar privacidade</button>
+    <h3>🚫 Pessoas bloqueadas</h3>
+    <div id="blockedList">Nenhuma pessoa bloqueada.</div>
+  </div>
+</div>
+
+</article>
+</main>
+</section>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/app.js"></script>
+</body>
+</html>
