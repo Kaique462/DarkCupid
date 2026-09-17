@@ -33,8 +33,6 @@ Esta versão implementa controles básicos de segurança, mas uma plataforma pú
 
 ## Área do dono
 A área do dono fica em "Área do dono" na tela inicial. Por padrão:
-- Usuário: `dono_darkcupid`
-- Senha: `DarkCupidDono#2026`
 
 Para produção, troque essas credenciais pelas variáveis `DARK_CUPID_OWNER_USER` e `DARK_CUPID_OWNER_PASSWORD`.
 
